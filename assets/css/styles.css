@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url("../images/exclusive_paper.png");
+  color: #777777;
+  margin: 0;
+}
+
+.site {
+  flex: 1;
+}
+
+h2 {
+  letter-spacing: 1.2px;
+}
+
+hr {
+  height: 2px;
+  color: #dddddd;
+  background-color: #dddddd;
+  border: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header Styles */
+header {
+  background-color: #ffffff;
+  border-bottom: 2px solid #cccccc;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+nav a {
+  padding: 10px;
+}
+
+nav a:hover {
+  background-color: rgb(240, 240, 240);
+  opacity: 0.7;
+  transition: 1s;
+}
+
+nav h2 {
+  display: inline-block;
+  background-color: #4aaaa5;
+  padding: 32px;
+  margin: 0;
+  color: white;
+}
+
+nav ul {
+  opacity: 0;
+  animation: 1s fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+nav ul li {
+  padding: 20px;
+}
+
+nav ul li:not(:last-child) {
+  border-right: 1px solid #dddddd;
+}
+
+/* mobile header */
+
+@media screen and (max-width: 640px) {
+  nav h2 {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+  nav ul {
+    margin: 20px auto;
+  }
+  nav ul li {
+    padding: 10px;
+  }
+}
+
+
+/* About Me content body styles */
+.about-me {
+  max-width: 960px;
+  margin: 60px auto;
+}
+
+.about-me h2 {
+  display: inline-block;
+  color: #4aaaa5;
+  transform: translate(0px, 20px);
+  animation: 1s slideIn forwards;
+}
+
+@keyframes slideIn {
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.about-me .container {
+  border: 1px solid #dddddd;;
+  padding: 32px;
+  background-color: white;
+}
+
+.about-me .content-body .text-content {
+  width: 400px;
+  font-size: 16px;
+  letter-spacing: 1.1px;
+  line-height: 22px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+}
+
+.about-me .content-body {
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: 40px;
+}
+
+.about-me img {
+  border-radius: 5px;
+  margin: 0 auto 30px auto; 
+}
+
+/* Contact content body styles */
+
+.contact h2 {
+  display: inline-block;
+  color: #4aaaa5;
+  transform: translate(0px, 20px);
+  animation: 1s slideIn forwards;
+}
+
+.contact .container {
+  max-width: 720px;
+  margin: 50px auto;
+  border: 1px solid #dddddd;;
+  padding: 32px;
+  background-color: white;
+}
+.contact .container form div {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact .container form label {
+  margin: 5px 0;
+}
+
+.contact .container form input, textarea {
+  font-size: 16px;
+  border: 1px solid #dddddd;
+  padding: 5px;
+}
+
+.contact .container form input:focus, textarea:focus {
+  outline: none;
+} 
+
+/* Portfolio content body styles */
+
+.portfolio h2 {
+  display: inline-block;
+  color: #4aaaa5;
+  transform: translate(0px, 20px);
+  animation: 1s slideIn forwards;
+}
+
+.portfolio .container {
+  max-width: 720px;
+  margin: 50px auto;
+  border: 1px solid #dddddd;;
+  padding: 32px;
+  background-color: white;
+}
+
+.portfolio .portfolio-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.portfolio .img-1 {
+  background: url(../images/retirement-app.png);
+}
+
+.portfolio .img-2 {
+  background: url(../images/election-map.png);
+}
+
+.portfolio .img-3 {
+  background: url(../images/sp500.png);
+}
+
+.portfolio .portfolio-img {
+  background-size: cover;
+  height: 250px;
+  width: 300px;
+  margin-top: 40px;
+  border: 1px solid #dddddd;
+}
+
+.portfolio .portfolio-img a {
+  display: block;
+  position: relative;
+  top: 150px;
+  text-align: center;
+  background-color: rgba(74,170,165,0.8);
+  color: white;
+  padding: 15px 0;
+  font-size: 18px;
+}
+
+.portfolio .portfolio-img a:hover {
+  background-color: rgba(74,170,165);
+  transition: 1s;
+}
+
+.portfolio .portfolio-img a:hover ~ div.portfolio-img {
+  opacity: 0.5;
+}
+
+/* Footer Styles */
+footer .container {
+  background-color: #666666;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+
+footer i {
+  margin: 0 10px;
+}
+
